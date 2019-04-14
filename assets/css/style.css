@@ -22,10 +22,10 @@ h1 {
   margin: 0 auto;
   background-color: #fef486;
   padding: 5% 0 10%;
+  border: 1px solid rgb(28, 51, 180);
 }
 
-header,
-.start-screen {
+header, .button {
   text-align: center;
 }
 
@@ -36,11 +36,21 @@ header,
   transform: translate(-50%, -50%);
 }
 
-#start-button {
+.button {
   background-color: #f8d3d7;
   margin: 0 auto;
   width: 25%;
   border: 2px solid #84679b;
   padding: 20px 0;
   cursor: pointer;
+}
+
+.trivia-content, .done {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
 }

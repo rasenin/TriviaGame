@@ -9,7 +9,10 @@
     <!-- stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <!-- font -->
-    <link href="https://fonts.googleapis.com/css?family=Dokdo" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Dokdo"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container centered">
@@ -17,46 +20,17 @@
         <h1>Totally Trivial Trivia!</h1>
       </header>
 
-      <!-- <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p> -->
+      <div id="start-button" class="button">Start</div>
 
-      <div class="start-screen">
-        <div id="start-button">Start</div>
+      <div class="trivia-content hidden">
+        <h4 id="timer"></h4>
       </div>
+
+      <div class="done hidden">
+        <h2>All Done!</h2>
+      </div>
+
+      <div id="restart-button" class="button hidden">Back to Start</div>
     </div>
 
     <!-- jQuery -->
@@ -65,5 +39,7 @@
       integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
       crossorigin="anonymous"
     ></script>
+
+    <script src="assets/javascript/app.js"></script>
   </body>
 </html>
