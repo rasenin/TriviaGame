@@ -80,6 +80,11 @@ header, .button {
   font-size: 30px;
 }
 
+.fixed {
+  position: fixed;
+  top: 0;
+}
+
 .hidden {
   display: none;
 }

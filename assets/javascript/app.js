@@ -13,6 +13,8 @@ var correct = 0;
 var incorrect = 0;
 var unanswered = 0;
 
+var timerOffset;
+
 $("#start-button").on("click", function() {
   $.ajax({
     url: queryURL,
@@ -22,16 +24,30 @@ $("#start-button").on("click", function() {
     $(".trivia-content").show();
     $("#done-button").show();
 
-    $("#timer").text("Time Remaining: " + secondsLeft + " Seconds");
+    $("#timer").html(
+      "Time Remaining: " +
+        "<span id=seconds>" +
+        secondsLeft +
+        "</span>" +
+        " Seconds"
+    );
+
+    timerOffset = $("#seconds").offset().top;
 
     intervalId = setInterval(function() {
       secondsLeft--;
 
-      $("#timer").text("Time Remaining: " + secondsLeft + " Seconds");
+      $("#timer").html(
+        "Time Remaining: " +
+          "<span id=seconds>" +
+          secondsLeft +
+          "</span>" +
+          " Seconds"
+      );
 
       if (secondsLeft === 0) {
         clearInterval(intervalId);
-        displayDone();
+        timesUp();
       }
     }, 1000);
 
@@ -103,13 +119,41 @@ function onSubmit() {
     var choice = document.forms["quiz"]["q" + i].value;
     if (choice === "") {
       unanswered++;
-    } else { // answered
+    } else {
+      // answered
       if (parseInt(choice) === answers[i]) {
         correct++;
       } else {
         incorrect++;
       }
-    }    
+    }
   }
   displayDone();
 }
+
+function timesUp() {
+  for (var i = 0; i < 10; i++) {
+    var choice = document.forms["quiz"]["q" + i].value;
+    if (choice === "") {
+      unanswered++;
+    } else {
+      // answered
+      if (parseInt(choice) === answers[i]) {
+        correct++;
+      } else {
+        incorrect++;
+      }
+    }
+  }
+  displayDone();
+}
+
+$(window).scroll(function() {
+  var scrollPos = $(window).scrollTop();
+
+  if (scrollPos >= timerOffset) {
+    $("#seconds").addClass("fixed");
+  } else {
+    $("#seconds").removeClass("fixed");
+  }
+});
