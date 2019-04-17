@@ -6,7 +6,7 @@ var results; // stores results of the ajax call
 
 //  Variable that will hold our setInterval that runs the timer
 var intervalId;
-var secondsLeft = 100;
+var secondsLeft = 5;
 
 var answers = [];
 var correct = 0;
@@ -114,6 +114,7 @@ function displayDone() {
 }
 
 function onSubmit() {
+  clearInterval(intervalId);
   event.preventDefault();
   for (var i = 0; i < 10; i++) {
     var choice = document.forms["quiz"]["q" + i].value;
