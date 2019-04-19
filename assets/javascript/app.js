@@ -6,7 +6,7 @@ var results; // stores results of the ajax call
 
 //  Variable that will hold our setInterval that runs the timer
 var intervalId;
-var secondsLeft = 5;
+var secondsLeft = 100;
 
 var answers = [];
 var correct = 0;
