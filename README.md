@@ -9,4 +9,4 @@ This trivia game starts with the user pressing the start button and then gives t
 * jQuery
 * AJAX
 
-The game can be played [here](https://rasenin.github.io/TriviaGame/)
+The game can be played [here](https://rasenin.github.io/TriviaGame/).
